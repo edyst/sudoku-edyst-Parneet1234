@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudoku</title>
     <link rel="icon" sizes="192x192" href="https://pbs.twimg.com/profile_images/1047734344327077888/fB9vXLeW_400x400.jpg">
-    <link rel="stylesheet" href="./assets/styles.css">
-    <script type="text/javascript" src="./assets/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="sudoku.js"></script>
 </head>
 <body>
-    <h1 class="game_center">Sudoku</h1>
-    <div class="game_setup">
-        <div class="diff">
-            <button class="change" id="easy" onClick="changeDiffLevel(1)">Easy</button>
-            <button class="change" id="medium" onClick="changeDiffLevel(2)">Medium</button>
-            <button class="change" id="hard" onClick="changeDiffLevel(3)">Hard</button>
+    <div class="setup">
+        <div class="level">
+            <button class="gameLevel" id="easyLevel" onClick="changeDifficultyLevel(1)">Easy</button>
+            <button class="gameLevel" id="mediumLevel" onClick="changeDifficultyLevel(2)">Medium</button>
+            <button class="gameLevel" id="hardLevel" onClick="changeDifficultyLevel(3)">Hard</button>
         </div>
     </div>
     <div class="game">
-        <div id="game_board"></div>       
+        <div id="board" class="gameBoard"></div>       
     </div>
-    <div class="reset_validate">
-        <center><button class="rv" onClick="validate()">Validate</button></center>
-        <br>
-        <center><button class="rv" onClick="reset()">Reset</button></center>
+    <div class="validate">
+        <button class="val" onClick="validateGame()">Validate</button>
+        <button class="res" onClick="resetGame()">Reset</button>
         </div>
 </body>
 </html>
